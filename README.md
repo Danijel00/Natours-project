@@ -1,5 +1,3 @@
-"Natours-app" 
-
 ------- TRAVELING AGENCY -------
 
 - FULLY RESPONSIVE
