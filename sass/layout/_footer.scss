@@ -118,10 +118,11 @@
     width: 100%;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
 
     @include respond(phone) {
       flex: 0 0 50%;
-      text-align: center;
+      margin: 2rem 0;
     }
 
     p {
