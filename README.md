@@ -7,7 +7,7 @@
 - RUN PROJECT:
 - a) write npm start in terminal
 - b) use live server
-
+- DEMO
 
 ![natours](https://user-images.githubusercontent.com/79769638/162431553-a7d77819-6a81-48a8-9d68-f5f3ae3b927e.gif)
 
