@@ -75,10 +75,6 @@ html {
   @include respond(tab-port) {
     font-size: 50%; //1rem = 8px; 8px / 16px = 50%
   }
-  // Tablet port
-  // @include respond(phone) {
-  //   font-size: 40.62%; //1rem = 6.5px; 6.5px / 16px = 40.62%
-  // }
 }
 
 body {
