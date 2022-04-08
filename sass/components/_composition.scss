@@ -2,6 +2,12 @@
   display: flex;
   position: relative;
 
+  @include respond(tab-port) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
   &__photo {
     width: 50%;
     box-shadow: 0 1.5rem 4rem rgba($color: #000000, $alpha: 0.4);
@@ -9,17 +15,18 @@
     z-index: 10;
     transition: all 0.2s;
     outline-offset: 2rem;
+    margin-top: 4rem;
 
     @include respond(tab-port) {
       position: initial;
-      margin-top: 4rem;
+      width: 100%;
+
       &:not(:last-child) {
         margin-right: 1rem;
       }
     }
 
-    @include respond(phone) {
-      width: 100%;
+    @include respond(tab-port) {
     }
 
     &--p1 {
