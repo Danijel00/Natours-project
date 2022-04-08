@@ -1,30 +1,38 @@
 "use strict";
 
+// Navigation
 const nav = document.querySelector(".navigation__nav");
-const navBtn = document.querySelector(".navigation__button");
-const navIcon = document.querySelector(".navigation__icon");
+// Burger btn
+const burgerBtn = document.querySelector(".navigation__button");
+// Burger line
+const burgerLine = document.querySelector(".navigation__icon");
+// Navigation background
 const navBackground = document.querySelector(".navigation__background");
-const navList = document.querySelector(".navigation__list");
-const navLinks = document.querySelectorAll(".navigation__item > a");
+// Navigation link
+const navLink = document.querySelectorAll(".navigation__link");
+// Scroll to top btn
 const scrollBtn = document.getElementById("btnScroll");
 
-navBtn.addEventListener("click", () => {
-  navBackground.style.transform = "scale(80)";
-  nav.style.opacity = "1";
-  nav.style.width = "100%";
+// BURGER BTN FUNCTIONALITY
+burgerBtn.addEventListener("click", () => {
+  navBackground.classList.toggle("active-background");
+  nav.classList.toggle("active-nav");
+  burgerLine.classList.toggle("active-line");
 });
 
-navList.addEventListener("click", () => {
-  navBackground.style.transform = "scale(0)";
-  nav.style.opacity = "0";
-  nav.style.width = "0";
+// TOGGLE OFF NAV MENU WHEN CLICK ON LINK
+navLink.forEach((e) => {
+  e.addEventListener("click", () => {
+    navBackground.classList.remove("active-background");
+    nav.classList.remove("active-nav");
+    burgerLine.classList.remove("active-line");
+  });
 });
 
 // COPYRIGHT
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // SCROLL TO TOP
-
 // Scroll btn
 window.onscroll = function () {
   scrollFunction();
